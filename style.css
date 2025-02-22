@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,12 +10,23 @@ body{
     background-size: cover;
 }
 
+h1{
+    text-align: center;
+    font-family: fantasy;
+    color: white;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-decoration-thickness:0.5rem ;
+}
+
 nav{
-    position: fixed;
+    position: sticky;
     background-color: #1b1b1bf1;
     margin-top: 0;
     width: 100%;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     text-align: left; 
     padding-left: 3rem;
     border-bottom: white solid;
@@ -30,12 +41,37 @@ nav a{
     padding-top:none ;
 }
 
-nav input{
-    border-radius: 0.8rem;
-    height: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 0.8rem;
-    padding-left: 0.5rem;
+nav a:hover{
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset:0.5rem;
+    text-decoration-thickness: 0.5rem;
+}
+
+#overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000f1;
+    display: none;
+    z-index: 1;
+}
+
+#searchbar{
+    position: absolute;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    left: 35%;
+    text-align: center;
+    display: none;
+    z-index: 2;
+}
+
+#searchbar input{
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 25rem;
+    text-align: center;
     background-color:  #1b1b1bf1;
     font-size: 1.2rem;
     border: solid white 0.15rem;
@@ -52,17 +88,29 @@ nav ::placeholder{
     padding-bottom: 2rem;
 }
 
-nav a:hover{
-    color: gray;
-    text-decoration: underline;
-    text-underline-offset:1rem;
-    text-decoration-thickness: 0.5rem;
+#exit-arrow{
+    width: 4rem;
+    height: auto;
+    margin: 1rem;
+    z-index: 3;
+    cursor: pointer;
+    position: fixed;
+    display: none;
+}
+
+#search-icon{
+    background: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 #cart{
     padding-top: 0.5rem;
     height:auto;
-    width:2.5rem;
+    width:2rem;
 }
 
 #logo{
@@ -71,3 +119,12 @@ nav a:hover{
   font-size: 3rem;
   text-decoration: none;
 }
+
+.current{
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset:0.5rem;
+    text-decoration-thickness: 0.5rem;
+}
+
+

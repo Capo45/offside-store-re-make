@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Offside Store</title> 
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" >
+        <div id="overlay"></div>
+        <img src="images/arrow.png" id="exit-arrow">
+        <div id="searchbar"><input placeholder="Search....."></div>
+        <nav>
+            <a href="index.html" id="logo">Offside Store</a>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html" class="current">Contact Us</a>
+            <button id="search-icon"><img src="images/search.png" style="width: 1.5rem;height: auto;"></button>
+            <a href="cart.html"><img src="Images/cart.png" id="cart"></a>
+        </nav>
+    </head>
+    <body>
+        <footer></footer>
+        <script>
+            let SearchButton=document.getElementById('search-icon');
+                SearchButton.addEventListener("click",function(){
+                    document.getElementById('searchbar').style.display="block";
+                    document.getElementById('overlay').style.display="block";
+                    document.getElementById('exit-arrow').style.display="block";
+                });
+                document.getElementById('exit-arrow').addEventListener("click",function(){
+                    document.getElementById('searchbar').style.display="none";
+                    document.getElementById('overlay').style.display="none";
+                    document.getElementById('exit-arrow').style.display="none";
+                })
+        </script>
+    </body>
+</html>
